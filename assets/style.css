@@ -33,6 +33,11 @@ p {
     font-size: 30px;
   }
 
+  .highlight {
+    color: yellow;
+    font-size: 20px;
+  }
+
   .card {
     width: 80%;
     margin: 40px auto;

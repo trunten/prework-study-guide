@@ -1,5 +1,6 @@
 var topics = ['HTML', 'CSS', 'Git', 'JavaScript'];
 var randomTopic = topics[Math.floor(Math.random() * topics.length)];
+var e = document.getElementById('detail');
 
 function listTopics() {
  for (var x = 0; x < topics.length; x++) {
@@ -8,25 +9,28 @@ function listTopics() {
 }
 
 function selectTopic(topic) {
- if (topic === 'HTML') {
-   console.log("Let's study HTML!");
+ var s = '';
+  if (topic === 'HTML') {
+   s ="Let's study HTML!";
  } else if (topic === 'CSS') {
-   console.log("Let's study CSS!");
+   s = "Let's study CSS!";
  } else if (topic === 'Git') {
-   console.log("Let's study Git!");
+   s = "Let's study Git!";
  } else if (topic === 'JavaScript') {
-   console.log("Let's study JavaScript!");
+   s ="Let's study JavaScript!";
  } else {
-   console.log('Please try again!');
+   s = 'Please try again!';
  }
+ console.log(s);
+ return s;
 }
 
 console.log('Here are the topics we learned through Prework:');
 listTopics();
 console.log('Which topic should we study first?');
 selectTopic(randomTopic);
-document.getElementById('html-section').addEventListener('click', function() { selectTopic('HTML'); });
-document.getElementById('css-section').addEventListener('click', function() { selectTopic('CSS'); });
-document.getElementById('git-section').addEventListener('click', function() { selectTopic('Git'); });
-document.getElementById('javascript-section').addEventListener('click', function() { selectTopic('JavaScript'); });
+document.getElementById('html-section').addEventListener('click', function() { var s = selectTopic('HTML'); e.innerHTML = s; });
+document.getElementById('css-section').addEventListener('click', function() { var s = selectTopic('CSS'); e.innerHTML = s; });
+document.getElementById('git-section').addEventListener('click', function() { var s =  selectTopic('Git'); e.innerHTML = s; });
+document.getElementById('javascript-section').addEventListener('click', function() { var s = selectTopic('JavaScript'); e.innerHTML = s; });
 
