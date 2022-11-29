@@ -15,6 +15,7 @@ To use this Prework Study Guide, you can review the notes in each section. For s
 ## Credits
 
 All my own work :P
+
 Well, mostly my own. Pinched the description wholesale from the prework guide!
 
 ## License
